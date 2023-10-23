@@ -9,13 +9,7 @@
   "author": "Ihr Name",
   "license": "MIT",
   "dependencies": {
-    "homebridge": "^0.4.0",
-    
-  },
-  "config": {
-    "username": "IhrStandardBenutzername",
-    "password": "IhrStandardPasswort",
-    "address": "http://IhreStandardServerAdresse"
+    "homebridge": "^0.4.0"
   },
   "keywords": ["homebridge-plugin", "plugin"],
   "homepage": "https://github.com/Hennycraft52/homebridge-plugin-ui.git",
