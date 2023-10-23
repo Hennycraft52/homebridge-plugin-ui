@@ -1,0 +1,26 @@
+{
+  "name": "homebridge-plugin-ui",
+  "version": "1.0.0",
+  "description": "Homebridge Plugin UI",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Ihr Name",
+  "license": "MIT",
+  "dependencies": {
+    "homebridge": "^0.4.0",
+    
+  },
+  "config": {
+    "username": "IhrStandardBenutzername",
+    "password": "IhrStandardPasswort",
+    "address": "http://IhreStandardServerAdresse"
+  },
+  "keywords": ["homebridge-plugin", "plugin"],
+  "homepage": "https://github.com/Hennycraft52/homebridge-plugin-ui.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hennycraft52/homebridge-plugin-ui.git"
+  }
+}
