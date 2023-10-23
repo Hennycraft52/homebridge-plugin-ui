@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "description": "Benutzername für die Konfiguration des Plugins"
+    },
+    "password": {
+      "type": "string",
+      "description": "Passwort für die Konfiguration des Plugins"
+    },
+    "address": {
+      "type": "string",
+      "description": "Serveradresse für die Konfiguration des Plugins"
+    }
+  }
+}
