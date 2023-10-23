@@ -2,7 +2,7 @@ const PLUGIN_NAME = 'plugin-ui';
 const PORT = 8080; // Der Port, auf dem Ihr Webserver laufen wird
 
 const express = require('express');
-const bodyParser = require('body-parser');
+const path = require('path');
 const app = express();
 
 class PluginUI {
@@ -14,23 +14,16 @@ class PluginUI {
     if (config) {
       this.username = config.username || 'default-username';
       this.password = config.password || 'default-password';
-      this.address = config.address || 'http://default-server-address';
     } else {
       this.log.error('No configuration found. Please check your config.json.');
       return;
     }
 
-    // Hier können Sie Ihren Webserver einrichten
-    app.use(bodyParser.urlencoded({ extended: true }));
-    app.use(bodyParser.json());
+    // Verzeichnis für Ihre Benutzeroberfläche (UI) definieren
+    const uiDirectory = path.join(__dirname, 'ui');
 
-    app.get('/ip/:xxxxx', (req, res) => {
-      const { xxxxx } = req.params;
-      // Hier können Sie die Konfiguration mit dem Wert von xxxxx aktualisieren
-      // Beachten Sie, dass dies ein einfaches Beispiel ist und Sie die Konfiguration entsprechend Ihren Anforderungen aktualisieren sollten.
-      this.address = `http://${xxxxx}`;
-      res.json({ message: `Address updated to http://${xxxxx}` });
-    });
+    // Statisches Verzeichnis für UI-Dateien einrichten
+    app.use('/ui', express.static(uiDirectory));
 
     // Starten Sie den Webserver
     app.listen(PORT, () => {
@@ -40,3 +33,8 @@ class PluginUI {
 
   // Implementieren Sie Ihre Plugin-Methoden und -Funktionen hier
 }
+
+// Registrieren Sie Ihr Plugin
+module.exports = (api) => {
+  api.registerAccessory(PLUGIN_NAME, PluginUI);
+};
