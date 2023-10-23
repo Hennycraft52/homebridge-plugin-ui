@@ -3,15 +3,18 @@
   "properties": {
     "username": {
       "type": "string",
-      "description": "Benutzername für die Konfiguration des Plugins"
+      "title": "Benutzername",
+      "default": "default-username"
     },
     "password": {
       "type": "string",
-      "description": "Passwort für die Konfiguration des Plugins"
+      "title": "Passwort",
+      "default": "default-password"
     },
     "address": {
       "type": "string",
-      "description": "Serveradresse für die Konfiguration des Plugins"
+      "title": "Serveradresse",
+      "default": "http://default-server-address"
     }
   }
 }
