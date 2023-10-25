@@ -1,40 +1,40 @@
-const PLUGIN_NAME = 'plugin-ui';
-const PORT = 8080; // Der Port, auf dem Ihr Webserver laufen wird
-
-const express = require('express');
-const path = require('path');
+const homebridge = require("homebridge");
+const express = require("express");
 const app = express();
 
-class PluginUI {
+const MyCustomPlugin = require("./plugins/my-custom-plugin");
+
+module.exports = (api) => {
+  const Service = api.hap.Service;
+  const Characteristic = api.hap.Characteristic;
+
+  api.registerPlatform("MyPlugin", "MyPlatform", MyPlatform);
+};
+
+class MyPlatform {
   constructor(log, config, api) {
     this.log = log;
     this.config = config;
     this.api = api;
 
-    if (config) {
-      this.username = config.username || 'default-username';
-      this.password = config.password || 'default-password';
-    } else {
-      this.log.error('No configuration found. Please check your config.json.');
-      return;
-    }
+    this.log("MyPlugin is initializing...");
 
-    // Verzeichnis für Ihre Benutzeroberfläche (UI) definieren
-    const uiDirectory = path.join(__dirname, 'ui');
+    // Initialize and configure your Homebridge platform here
 
-    // Statisches Verzeichnis für UI-Dateien einrichten
-    app.use('/ui', express.static(uiDirectory));
-
-    // Starten Sie den Webserver
-    app.listen(PORT, () => {
-      this.log(`Webserver started on port ${PORT}`);
-    });
+    // Start the web server
+    this.startWebServer();
   }
 
-  // Implementieren Sie Ihre Plugin-Methoden und -Funktionen hier
+  // Add other methods and logic for your platform
 }
 
-// Registrieren Sie Ihr Plugin
-module.exports = (api) => {
-  api.registerAccessory(PLUGIN_NAME, PluginUI);
+MyPlatform.prototype.startWebServer = function () {
+  const port = this.config.webPort || 3000;
+
+  // Define your web routes and logic here
+  app.use(express.static("web"));
+
+  app.listen(port, () => {
+    this.log(`Web server started on port ${port}`);
+  });
 };
