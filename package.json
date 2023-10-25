@@ -1,6 +1,6 @@
 {
   "name": "homebridge-plugin-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Homebridge Plugin UI",
   "main": "index.js",
   "scripts": {
@@ -9,11 +9,9 @@
   "author": "hennycraft",
   "license": "MIT",
   "dependencies": {
-    "homebridge": "^1.4.0",
     "express": ">1.0.0"
   },
-  "engines": {
-    "node": ">=14.0.0",  
+  "engines": { 
     "homebridge": ">=1.1.0" 
   },
   "devDependencies": {
