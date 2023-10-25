@@ -1,87 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homebridge Plugin UI</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        .input-container {
-            margin: 10px 0;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #555;
-        }
-
-        #result {
-            margin-top: 20px;
-        }
-    </style>
+  <title>Meine Homebridge Plugins</title>
 </head>
 <body>
-    <h1>Homebridge Plugin UI</h1>
+  <h1>Meine Homebridge Plugins</h1>
 
-    <div class="input-container">
-        <label for="username">Benutzername:</label>
-        <input type="text" id="username" placeholder="Benutzername eingeben">
-    </div>
-
-    <div class="input-container">
-        <label for="password">Passwort:</label>
-        <input type="password" id="password" placeholder="Passwort eingeben">
-    </div>
-
-    <div class="input-container">
-        <label for="address">Serveradresse:</label>
-        <input type="text" id="address" placeholder="Serveradresse eingeben">
-    </div>
-
-    <button id="update">Aktualisieren</button>
-
-    <div id="result"></div>
-
-    <script>
-        document.getElementById('update').addEventListener('click', function () {
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-            var address = document.getElementById('address').value;
-
-            // Hier können Sie JavaScript verwenden, um die Daten zu aktualisieren
-            // Zum Beispiel, um die Konfiguration an Ihr Homebridge-Plugin zu senden
-            // und das Ergebnis in #result anzuzeigen.
-        });
-    </script>
+  <h2>Installierte Plugins</h2>
+  <ul id="plugin-list">
+    <!-- Hier werden die Plugins dynamisch eingefügt -->
+  </ul>
+  
+  <script src="app.js"></script>
 </body>
 </html>
