@@ -29,7 +29,7 @@ class MyPlatform {
   async startWebServer() {
     const port = this.config.webPort || 3000;
     const uiDirectory = path.join(__dirname, "ui");
-    app.use(express.static(uiDirectory);
+    app.use(express.static(uiDirectory));
 
     // API-Endpunkt, um die Liste der Plugins abzurufen
     app.get("/api/plugins", async (req, res) => {
