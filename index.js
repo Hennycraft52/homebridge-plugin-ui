@@ -5,7 +5,7 @@ const app = express();
 const fs = require("fs").promises;
 const path = require("path");
 
-const MyPlugin = require("./plugins/my-custom-plugin");
+const MyPlugin = require("./plugins/my-custom-plugin.js");
 
 module.exports = (api) => {
   const Service = api.hap.Service;
