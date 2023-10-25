@@ -1,8 +1,8 @@
-# Mein Homebridge-Plugin
+# Homebridge-Plugin-UI
 
 ## Beschreibung
 
-Mein Homebridge-Plugin ermöglicht es dir, benutzerdefinierte Geräte und Automatisierungen in Homebridge zu erstellen. Dieses Plugin erweitert die Funktionalität deiner Homebridge-Instanz.
+Dieses Homebridge Plugin ermöglicht es dir ganz einfach dein eigendes Plugin zu ertsellen!
 
 ## Installation
 
