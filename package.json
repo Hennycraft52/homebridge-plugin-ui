@@ -28,11 +28,5 @@
   },
   "bugs": {
     "url": "https://github.com/Hennycraft52/homebridge-plugin-ui/issues"
-  },
-  "contributors": [
-    {
-      "name": "hennycraft",
-      "email": "https://github.com/Hennycraft52"
-    }
   }
 }
