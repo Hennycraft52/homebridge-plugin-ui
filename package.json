@@ -1,12 +1,12 @@
 {
   "name": "homebridge-plugin-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Homebridge Plugin UI",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Ihr Name",
+  "author": "hennycraft",
   "license": "MIT",
   "dependencies": {
     "homebridge": "^1.4.0",
